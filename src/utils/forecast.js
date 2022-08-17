@@ -11,7 +11,7 @@ const forecast=(lat,long,callback)=>{
             callback('Unable to find location, please try another',undefined)
         }
         else{
-            callback(undefined,response.body.current.weather_descriptions[0]+' current temperature is: '+response.body.current.temperature+' feels like: '+response.body.current.feelslike)
+            callback(undefined,response.body.current.weather_descriptions[0]+' current temperature is: '+response.body.current.temperature+' feels like: '+response.body.current.feelslike+' Humidity is:'+response.body.current.humidity)
         }
     })
 }
